@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {HomeComponent} from "./home/home.component";
-import {ProductsComponent} from "./products/products.component";
-import {NewProductComponent} from "./new-product/new-product.component";
+import {UsersComponent} from "./component/users/users.component";
+import {UserDetailComponent} from "./component/user-detail/user-detail.component";
+
 
 const routes: Routes = [
   {
-    path:"home",
-    component:HomeComponent
+    path:'users',
+    component:UsersComponent
   },
   {
-    path:"products",
-    component:ProductsComponent
+    path:'user/:uuid',
+    component:UserDetailComponent
   },
   {
-    path:"newProduct",
-    component:NewProductComponent
-  },
+    path:'**',
+    redirectTo:'users'
+  }
 
 ];
 
